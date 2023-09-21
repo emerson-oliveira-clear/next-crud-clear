@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import ClienteRepositorio from '@/core/ClienteRepositorio'
 import ColecaoCliente from '@/backend/db/ColecaoCliente'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
 
       repo.obterTodos().then(clientes =>{
         setClientes(clientes)
-        setVisivel('form')
+        setVisivel('tabela')
       })
     }
 
